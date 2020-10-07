@@ -32,7 +32,7 @@ int go(int index, vector<int> &first, vector<int> &second) {
 	first.pop_back();
 
 	second.push_back(index);
-	int t2 = go(index, first, second);
+	int t2 = go(index + 1, first, second);
 	if (answer == -1 || (t2 != -1 && answer > t2))
 		answer = t2;
 	second.pop_back();
